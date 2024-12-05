@@ -92,10 +92,12 @@ let subscriptions = [
   
   let cancelSubscriptions = function(array){
     for(let i = 0; i < array.length; i++){
-      //how to set "every other"?
+      //using conditional statement to find subscriptions over 10 dollars
+      if(subscriptions.costPerMonth > 10){
+      //how to set "every other" to true?
       arr[i]
     }
-  };
+  }};
   
   
   /*
@@ -122,8 +124,12 @@ This is an example of what the return value should look like as a string:
 "HBOMax - 14.99\nHulu - 7.99\nNetflix - 9.99\nExpress VPN - 12.95\nAdobe Premiere Pro - 20.99\n"
   */
   
-  let subscriptionList = function(){
-   
+  let subscriptionList = function(array){
+   array.reduce(`subscriptions[0].name + " - " + subscriptions[0].costPerMonth + \n
+   subscriptions[0].name + " - " + subscriptions[0].costPerMonth + \n
+   subscriptions[1].name + " - " + subscriptions[1].costPerMonth + \n
+   subscriptions[2].name + " - " + subscriptions[2].costPerMonth + \n
+   subscriptions[3].name + " - " + subscriptions[3].costPerMonth`)
   };
   
   
@@ -143,8 +149,10 @@ This is an example of what the return value should look like as a string:
 getSubscriptionObject('HBOMax'); // => { name: 'HBOMax', costPerMonth: 14.99 }
 getSubscriptionObject('Disney Plus'); // => { name: null, costPerMonth: null } */
   
-  let getSubscriptionObject = function(){
-   
+  let getSubscriptionObject = function(array, name){
+ 
+
+
   };
   
   
@@ -154,10 +162,14 @@ getSubscriptionObject('Disney Plus'); // => { name: null, costPerMonth: null } *
   /////////////////////////////////////////////////////////////////
   
   /**
-   
+Create a function called updateSubscription that takes in two parameters - object and updates. 
+object represents a single subscription object; updates represents an array of arrays, where 
+each subarray contains a property to update and a value to assign to that property. This function 
+should use this updates array to access the necessary properties on the input object and assign 
+the new values. updateSubscription should return the input object after modifying it.
    */
   
-  let updateSubscription = function(){
+  let updateSubscription = function(object, updates){
     
   };
   
@@ -167,9 +179,17 @@ getSubscriptionObject('Disney Plus'); // => { name: null, costPerMonth: null } *
   // PROBLEM #5 ///////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////
   
-  let getMultipleUsers = function(){
-   
-  }; 
+/**
+ * 
+ * Create a function called getMultipleUsers that takes in one parameter - array - 
+ * which represents an array of subscription objects. This function should use the 
+ * native filter method to return a new array of only the subscriptions that have multiple users.
+*/
+
+//function getMultipleUsers(array){
+//subscriptions.filter(subscriptions.users.length > 1 {array.push(subscriptions.users)})
+//}
+
   
   
   
@@ -177,6 +197,14 @@ getSubscriptionObject('Disney Plus'); // => { name: null, costPerMonth: null } *
   /////////////////////////////////////////////////////////////////
   // PROBLEM #6 ///////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////
+
+  /**
+  Create a function called getUsersArray that takes in one parameter - 
+  array which represents an array of subscription objects. This function 
+  should use the native map method to return a new array of objects that only 
+  contains the name property of the subscription and users property pointing 
+  to an array of the users.
+   */
   
   let getUsersArray = function(){
    
